@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'themes/**'
+      - 'registry.json'
 
 permissions:
   contents: write
@@ -18,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -36,3 +39,16 @@ jobs:
           else
             echo "registry.json unchanged"
           fi
+      - name: Purge jsDelivr CDN cache
+        # jsDelivr caches mutable @main refs for up to 12h. Purge the registry
+        # index (always) plus any theme assets changed in this push so the app
+        # sees updates immediately instead of waiting for the cache to expire.
+        run: |
+          base="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main"
+          paths="registry.json"
+          changed="$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'themes/**/theme.css' 'themes/**/thumbnail.png' 2>/dev/null || true)"
+          paths="$paths $changed"
+          for p in $paths; do
+            code="$(curl -sS -o /dev/null -w '%{http_code}' "$base/$p" || echo 000)"
+            echo "purge $p -> $code"
+          done
