@@ -28,7 +28,7 @@ tokens are not. The `validate` workflow checks every bit of this, so run it
 before you push.
 
 **`thumbnail.png`:** PNG, ≤ 300 KB, 320–960 × 200–600 px, aspect ratio 1.4–1.7
-(recommended **480×300**). A screenshot of Psysonic with your theme applied
+(recommended **720×450**). A screenshot of Psysonic with your theme applied
 works great.
 
 ## Naming & description

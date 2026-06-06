@@ -166,7 +166,7 @@ function validateThumbnail(path, push) {
   if (width < THUMB.minW || width > THUMB.maxW) push(`thumbnail width ${width}px outside ${THUMB.minW}-${THUMB.maxW}px`);
   if (height < THUMB.minH || height > THUMB.maxH) push(`thumbnail height ${height}px outside ${THUMB.minH}-${THUMB.maxH}px`);
   if (aspect < THUMB.minAspect || aspect > THUMB.maxAspect) {
-    push(`thumbnail aspect ${aspect.toFixed(2)} outside ${THUMB.minAspect}-${THUMB.maxAspect} (recommended 480x300)`);
+    push(`thumbnail aspect ${aspect.toFixed(2)} outside ${THUMB.minAspect}-${THUMB.maxAspect} (recommended 720x450)`);
   }
 }
 

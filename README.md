@@ -11,7 +11,7 @@ A theme is a small set of colour tokens. Each theme lives in its own folder unde
 themes/<id>/
 ├── manifest.json   # id, name, author, version, description, mode, [tags], [minAppVersion]
 ├── theme.css       # a single [data-theme='<id>'] block of contract tokens
-└── thumbnail.png   # store preview (recommended 480×300)
+└── thumbnail.png   # store preview (recommended 720×450)
 ```
 
 The `theme.css` may set **only** the colour tokens listed in

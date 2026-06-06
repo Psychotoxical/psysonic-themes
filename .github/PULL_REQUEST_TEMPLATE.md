@@ -11,7 +11,7 @@
 - [ ] `node scripts/validate-theme.mjs themes/<id>` prints **PASS**
 - [ ] Folder name equals `manifest.id` (lowercase kebab-case)
 - [ ] `theme.css` is a single `[data-theme='<id>']` block, contract tokens only
-- [ ] `thumbnail.png` added (PNG, ≤ 300 KB, ~480×300)
+- [ ] `thumbnail.png` added (PNG, ≤ 300 KB, ~720×450)
 - [ ] `description` names the inspiration / credits the upstream palette (for recolours)
 - [ ] Only one theme in this PR
 - [ ] I agree to contribute under the MIT License
