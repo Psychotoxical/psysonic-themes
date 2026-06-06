@@ -43,12 +43,14 @@ jobs:
         # jsDelivr caches mutable @main refs for up to 12h. Purge the registry
         # index (always) plus any theme assets changed in this push so the app
         # sees updates immediately instead of waiting for the cache to expire.
+        # Use ONE batch POST: jsDelivr throttles rapid single-file purges, which
+        # left part of a large push (e.g. a full thumbnail refresh) unpurged.
+        env:
+          REPO: ${{ github.repository }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
         run: |
-          base="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main"
-          paths="registry.json"
-          changed="$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'themes/**/theme.css' 'themes/**/thumbnail.png' 2>/dev/null || true)"
-          paths="$paths $changed"
-          for p in $paths; do
-            code="$(curl -sS -o /dev/null -w '%{http_code}' "$base/$p" || echo 000)"
-            echo "purge $p -> $code"
-          done
+          paths="$( { echo registry.json; git diff --name-only "$BEFORE" "$AFTER" -- 'themes/**/theme.css' 'themes/**/thumbnail.png' 2>/dev/null || true; } | sort -u )"
+          body="$(printf '%s\n' "$paths" | REPO="$REPO" node -e 'const fs=require("fs");const repo=process.env.REPO;const p=[...new Set(fs.readFileSync(0,"utf8").split(/\s+/).filter(Boolean))].map(x=>`/gh/${repo}@main/${x}`);process.stdout.write(JSON.stringify({path:p}))')"
+          echo "purging $(printf '%s\n' "$paths" | grep -c .) path(s)"
+          curl -sS -X POST https://purge.jsdelivr.net/ -H 'Content-Type: application/json' -d "$body" || true
