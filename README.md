@@ -1,4 +1,6 @@
-# psysonic-themes
+<p align="center">
+  <img src="img/themeslogo.png" alt="Psysonic Themes" width="460">
+</p>
 
 The community theme catalogue for **[Psysonic](https://github.com/Psychotoxical/psysonic)**, the cross-platform music player.
 
