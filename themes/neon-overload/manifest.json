@@ -1,0 +1,9 @@
+{
+  "id": "neon-overload",
+  "name": "Neon Overload",
+  "author": "Psychotoxical",
+  "version": "1.0.0",
+  "description": "A neon recolor of the Nord palette.",
+  "mode": "dark",
+  "tags": ["dark", "neon"]
+}

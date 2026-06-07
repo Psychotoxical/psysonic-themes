@@ -1,0 +1,48 @@
+[data-theme='neon-overload'] {
+  color-scheme: dark;
+
+  --accent: #ff00cc;
+  --accent-dim: rgba(255, 0, 204, 0.20);
+  --accent-glow: rgba(255, 0, 204, 0.50);
+  --accent-2: #00ffcc;
+
+  --bg-app: #101014;
+  --bg-sidebar: #0a0a0e;
+  --bg-card: #16161c;
+  --bg-hover: #1e1e26;
+  --bg-elevated: #20202a;
+  --bg-player: #0a0a0e;
+  --bg-deep: #050507;
+  --bg-glass: rgba(16, 16, 20, 0.8);
+
+  --border: #2a2a33;
+  --border-subtle: #1e1e26;
+  --border-dropdown: #2a2a33;
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #3a3a44;
+  --text-muted: #2b2b33;
+  --text-on-accent: #ffffff;
+
+  --danger: #ff0033;
+  --positive: #00ff66;
+  --warning: #ffcc00;
+  --highlight: #ff00cc;
+}
+
+/* Full-viewport animated rainbow background, looping forever. */
+@keyframes neon-overload-bg {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.app-shell,
+body {
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
+  background-size: 800% 800%;
+  animation: neon-overload-bg 4s linear infinite;
+}
+
+/* Hide the track title in the player bar. */
+.player-bar-title {
+  display: none;
+}
