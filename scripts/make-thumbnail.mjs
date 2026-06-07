@@ -3,8 +3,8 @@
 //
 //   node scripts/make-thumbnail.mjs <out.png> [#hexcolor] [width] [height]
 //
-// Defaults: 480x300, mid-grey. Real submissions should replace this with an
-// actual screenshot of the theme, but it produces a contract-valid placeholder.
+// Defaults: 1280x720 (16:9), mid-grey. Real submissions should replace this
+// with an actual screenshot, but it produces a contract-valid placeholder.
 
 import { writeFileSync } from 'node:fs';
 import { deflateSync } from 'node:zlib';
@@ -73,7 +73,7 @@ if (!out) {
   process.exit(2);
 }
 const color = hex(process.argv[3]);
-const width = Number(process.argv[4]) || 480;
-const height = Number(process.argv[5]) || 300;
+const width = Number(process.argv[4]) || 1280;
+const height = Number(process.argv[5]) || 720;
 writeFileSync(out, solidPng(width, height, color));
 console.log(`wrote ${out} (${width}x${height})`);

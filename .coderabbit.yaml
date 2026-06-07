@@ -17,6 +17,9 @@ reviews:
   path_filters:
     - "!registry.json"      # auto-generated, never hand-edited
     - "!**/*.png"           # thumbnails are binary
+    - "!**/*.webp"          # thumbnails are binary
+    - "!**/*.jpg"
+    - "!**/*.jpeg"
     - "!package-lock.json"
     - "!node_modules/**"
   path_instructions:

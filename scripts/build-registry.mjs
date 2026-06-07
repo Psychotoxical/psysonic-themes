@@ -38,7 +38,7 @@ function build() {
         ...(m.tags ? { tags: m.tags } : {}),
         ...(m.minAppVersion ? { minAppVersion: m.minAppVersion } : {}),
         css: `themes/${id}/theme.css`,
-        thumbnail: `themes/${id}/thumbnail.png`,
+        thumbnail: `themes/${id}/thumbnail.webp`,
       });
     }
   }

@@ -34,7 +34,7 @@ thumbnail on demand. Nothing here is bundled into the app.
 themes/<id>/
 ├── manifest.json   # id, name, author, version, description, mode, [tags], [minAppVersion]
 ├── theme.css       # your theme's CSS (recolour the semantic tokens, and more)
-└── thumbnail.png   # store preview (recommended 720×450)
+└── thumbnail.png   # store preview screenshot — PNG/JPG, 16:9 (CI converts to WebP)
 ```
 
 `theme.css` is free-form CSS. The recommended starting point is to recolour the
@@ -58,9 +58,11 @@ themes. Quality and taste are handled by review.
    (lowercase kebab-case, must match the folder name).
 3. Recolour the tokens (the simplest path), and/or add your own selectors and
    animations. Unused optional tokens can be trimmed.
-4. Add a `thumbnail.png`: a screenshot of Psysonic with your theme applied (PNG,
-   ≤ 300 KB, recommended 720×450). Quick placeholder:
-   `node scripts/make-thumbnail.mjs themes/<your-id>/thumbnail.png "#15171e"`.
+4. Add a `thumbnail.png` (or `.jpg`): a **16:9 screenshot** of Psysonic with
+   your theme applied (at least 1280×720). CI converts it to an optimized
+   `thumbnail.webp` on merge, so you don't need to resize or convert anything —
+   just drop in a screenshot. No screenshot yet? Quick placeholder:
+   `node scripts/make-thumbnail.mjs themes/<your-id>/thumbnail.png "#15171e" 1280 720`.
 5. Validate, then open a pull request.
 
 ```

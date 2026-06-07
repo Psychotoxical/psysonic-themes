@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "ajv": "^8.17.1",
-    "postcss": "^8.4.47"
+    "postcss": "^8.4.47",
+    "sharp": "^0.34.5"
   }
 }

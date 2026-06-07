@@ -6,11 +6,12 @@
 //
 // Community themes are free-form (any selectors, structure, @keyframes,
 // animations). This validator is an *assistant*: it enforces only the hard
-// safety floor, a well-formed manifest, and a valid thumbnail. Quality, taste
+// safety floor, a well-formed manifest, and a usable thumbnail. Quality, taste
 // and performance are handled by manual moderation; sideloaded themes are the
 // user's own risk. The floor mirrors the in-app guard
 // (psysonic/src/utils/themes/themeInjection.ts):
-//   - a theme folder must contain manifest.json, theme.css, thumbnail.png
+//   - a theme folder must contain manifest.json, theme.css, and a thumbnail
+//     (thumbnail.png / .jpg / .webp — CI normalises it to thumbnail.webp)
 //   - no network: no @import, and url() only as a data: URI
 //   - no global custom-property registration (@property)
 //   - no script-in-CSS (expression(), javascript:, -moz-binding) or <style>/<script>
@@ -23,22 +24,26 @@ import { dirname, join, resolve, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import postcss from 'postcss';
 import Ajv from 'ajv';
+import sharp from 'sharp';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, '..');
 
 const manifestSchema = JSON.parse(readFileSync(join(REPO, 'schema', 'manifest.schema.json'), 'utf8'));
 
-// Thumbnail constraints.
-const THUMB_MAX_BYTES = 300 * 1024;
-const THUMB = { minW: 320, maxW: 960, minH: 200, maxH: 600, minAspect: 1.4, maxAspect: 1.7 };
+// Thumbnail constraints. Sources may be PNG/JPG/WebP; CI normalises them to a
+// ≤1280×720 16:9 WebP. Require enough source resolution to reach full size, a
+// 16:9-ish aspect (a standard screenshot), and a reasonable file cap.
+const THUMB_EXTS = ['png', 'jpg', 'jpeg', 'webp'];
+const THUMB_MAX_BYTES = 6 * 1024 * 1024; // source cap (the emitted WebP is tiny)
+const THUMB = { minW: 1280, minH: 720, minAspect: 1.5, maxAspect: 1.85 };
 const CSS_MAX_BYTES = 256 * 1024;
 
 const ajv = new Ajv({ allErrors: true });
 const validateManifest = ajv.compile(manifestSchema);
 
-/** Collect problems for one theme folder; return an array of message strings. */
-function validateTheme(folder) {
+/** Collect problems for one theme folder; resolves to an array of messages. */
+async function validateTheme(folder) {
   const errors = [];
   const id = basename(folder);
   const push = (m) => errors.push(m);
@@ -46,10 +51,10 @@ function validateTheme(folder) {
   // ---- files present ----
   const manifestPath = join(folder, 'manifest.json');
   const cssPath = join(folder, 'theme.css');
-  const thumbPath = join(folder, 'thumbnail.png');
-  for (const [label, p] of [['manifest.json', manifestPath], ['theme.css', cssPath], ['thumbnail.png', thumbPath]]) {
-    if (!existsSync(p)) push(`missing ${label}`);
-  }
+  if (!existsSync(manifestPath)) push('missing manifest.json');
+  if (!existsSync(cssPath)) push('missing theme.css');
+  const thumbPath = THUMB_EXTS.map((e) => join(folder, `thumbnail.${e}`)).find((p) => existsSync(p)) || null;
+  if (!thumbPath) push('missing thumbnail (thumbnail.png / .jpg / .webp)');
   if (errors.length) return errors; // nothing else is meaningful without the files
 
   // ---- manifest ----
@@ -113,34 +118,38 @@ function validateTheme(folder) {
   });
 
   // ---- thumbnail ----
-  validateThumbnail(thumbPath, push);
+  await validateThumbnail(thumbPath, push);
 
   return errors;
 }
 
-/** PNG sanity: magic bytes, size cap, dimensions from the IHDR chunk. */
-function validateThumbnail(path, push) {
-  const buf = readFileSync(path);
+/** Thumbnail sanity via sharp: decodable image, format, dimensions, file cap. */
+async function validateThumbnail(path, push) {
   const size = statSync(path).size;
-  if (size > THUMB_MAX_BYTES) push(`thumbnail.png is ${(size / 1024).toFixed(0)} KB; cap is ${THUMB_MAX_BYTES / 1024} KB`);
-  const sig = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
-  if (buf.length < 24 || !sig.every((b, i) => buf[i] === b)) {
-    push('thumbnail.png is not a valid PNG');
+  if (size > THUMB_MAX_BYTES) push(`thumbnail is ${(size / 1024 / 1024).toFixed(1)} MB; cap is ${THUMB_MAX_BYTES / 1024 / 1024} MB`);
+  let meta;
+  try {
+    meta = await sharp(path).metadata();
+  } catch {
+    push('thumbnail is not a readable image');
     return;
   }
-  // IHDR is the first chunk: length(4) "IHDR"(4) width(4) height(4) ...
-  const width = buf.readUInt32BE(16);
-  const height = buf.readUInt32BE(20);
-  const aspect = width / height;
-  if (width < THUMB.minW || width > THUMB.maxW) push(`thumbnail width ${width}px outside ${THUMB.minW}-${THUMB.maxW}px`);
-  if (height < THUMB.minH || height > THUMB.maxH) push(`thumbnail height ${height}px outside ${THUMB.minH}-${THUMB.maxH}px`);
+  if (!THUMB_EXTS.includes((meta.format || '').replace('jpeg', 'jpeg'))) {
+    push(`thumbnail must be PNG, JPG or WebP (got: ${meta.format})`);
+  }
+  const w = meta.width || 0;
+  const h = meta.height || 0;
+  if (w < THUMB.minW || h < THUMB.minH) {
+    push(`thumbnail is ${w}x${h}; the source must be at least ${THUMB.minW}x${THUMB.minH} (a 16:9 screenshot)`);
+  }
+  const aspect = h ? w / h : 0;
   if (aspect < THUMB.minAspect || aspect > THUMB.maxAspect) {
-    push(`thumbnail aspect ${aspect.toFixed(2)} outside ${THUMB.minAspect}-${THUMB.maxAspect} (recommended 720x450)`);
+    push(`thumbnail aspect ${aspect.toFixed(2)} outside ${THUMB.minAspect}-${THUMB.maxAspect}; use a 16:9 screenshot`);
   }
 }
 
 // ---- entry point ----
-function main() {
+async function main() {
   const arg = process.argv[2];
   let folders;
   if (arg) {
@@ -160,7 +169,7 @@ function main() {
   let failed = 0;
   for (const folder of folders) {
     const id = basename(folder);
-    const errors = validateTheme(folder);
+    const errors = await validateTheme(folder);
     if (errors.length === 0) {
       console.log(`PASS  ${id}`);
     } else {

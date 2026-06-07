@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-07T13:22:42.080Z",
+  "generatedAt": "2026-06-07T16:55:00.165Z",
   "themes": [
     {
       "id": "aero-glass",
@@ -13,7 +13,7 @@
         "operating-systems"
       ],
       "css": "themes/aero-glass/theme.css",
-      "thumbnail": "themes/aero-glass/thumbnail.png"
+      "thumbnail": "themes/aero-glass/thumbnail.webp"
     },
     {
       "id": "alliance",
@@ -26,7 +26,7 @@
         "games"
       ],
       "css": "themes/alliance/theme.css",
-      "thumbnail": "themes/alliance/thumbnail.png"
+      "thumbnail": "themes/alliance/thumbnail.webp"
     },
     {
       "id": "amoled-black-pure",
@@ -36,7 +36,7 @@
       "description": "A pure-black palette built for AMOLED displays.",
       "mode": "dark",
       "css": "themes/amoled-black-pure/theme.css",
-      "thumbnail": "themes/amoled-black-pure/thumbnail.png"
+      "thumbnail": "themes/amoled-black-pure/thumbnail.webp"
     },
     {
       "id": "barb-and-ken",
@@ -49,7 +49,7 @@
         "movies"
       ],
       "css": "themes/barb-and-ken/theme.css",
-      "thumbnail": "themes/barb-and-ken/thumbnail.png"
+      "thumbnail": "themes/barb-and-ken/thumbnail.webp"
     },
     {
       "id": "blade",
@@ -62,7 +62,7 @@
         "movies"
       ],
       "css": "themes/blade/theme.css",
-      "thumbnail": "themes/blade/thumbnail.png"
+      "thumbnail": "themes/blade/thumbnail.webp"
     },
     {
       "id": "braindead",
@@ -75,7 +75,7 @@
         "demo"
       ],
       "css": "themes/braindead/theme.css",
-      "thumbnail": "themes/braindead/thumbnail.png"
+      "thumbnail": "themes/braindead/thumbnail.webp"
     },
     {
       "id": "carbon-grey",
@@ -85,7 +85,7 @@
       "description": "Understated carbon-grey neutrals.",
       "mode": "dark",
       "css": "themes/carbon-grey/theme.css",
-      "thumbnail": "themes/carbon-grey/thumbnail.png"
+      "thumbnail": "themes/carbon-grey/thumbnail.webp"
     },
     {
       "id": "carbonfox",
@@ -99,7 +99,7 @@
         "nightfox"
       ],
       "css": "themes/carbonfox/theme.css",
-      "thumbnail": "themes/carbonfox/thumbnail.png"
+      "thumbnail": "themes/carbonfox/thumbnail.webp"
     },
     {
       "id": "chameleon-light",
@@ -113,7 +113,7 @@
         "green"
       ],
       "css": "themes/chameleon-light/theme.css",
-      "thumbnail": "themes/chameleon-light/thumbnail.png"
+      "thumbnail": "themes/chameleon-light/thumbnail.webp"
     },
     {
       "id": "copper-oxide",
@@ -123,7 +123,7 @@
       "description": "Oxidised copper with a verdigris-teal patina.",
       "mode": "dark",
       "css": "themes/copper-oxide/theme.css",
-      "thumbnail": "themes/copper-oxide/thumbnail.png"
+      "thumbnail": "themes/copper-oxide/thumbnail.webp"
     },
     {
       "id": "cupertino-beats",
@@ -136,7 +136,7 @@
         "mediaplayer"
       ],
       "css": "themes/cupertino-beats/theme.css",
-      "thumbnail": "themes/cupertino-beats/thumbnail.png"
+      "thumbnail": "themes/cupertino-beats/thumbnail.webp"
     },
     {
       "id": "cupertino-dark",
@@ -149,7 +149,7 @@
         "operating-systems"
       ],
       "css": "themes/cupertino-dark/theme.css",
-      "thumbnail": "themes/cupertino-dark/thumbnail.png"
+      "thumbnail": "themes/cupertino-dark/thumbnail.webp"
     },
     {
       "id": "cupertino-light",
@@ -162,7 +162,7 @@
         "operating-systems"
       ],
       "css": "themes/cupertino-light/theme.css",
-      "thumbnail": "themes/cupertino-light/thumbnail.png"
+      "thumbnail": "themes/cupertino-light/thumbnail.webp"
     },
     {
       "id": "dark-side-of-the-moon",
@@ -175,7 +175,7 @@
         "famous-albums"
       ],
       "css": "themes/dark-side-of-the-moon/theme.css",
-      "thumbnail": "themes/dark-side-of-the-moon/thumbnail.png"
+      "thumbnail": "themes/dark-side-of-the-moon/thumbnail.webp"
     },
     {
       "id": "dawnfox",
@@ -189,7 +189,7 @@
         "nightfox"
       ],
       "css": "themes/dawnfox/theme.css",
-      "thumbnail": "themes/dawnfox/thumbnail.png"
+      "thumbnail": "themes/dawnfox/thumbnail.webp"
     },
     {
       "id": "dayfox",
@@ -203,7 +203,7 @@
         "nightfox"
       ],
       "css": "themes/dayfox/theme.css",
-      "thumbnail": "themes/dayfox/thumbnail.png"
+      "thumbnail": "themes/dayfox/thumbnail.webp"
     },
     {
       "id": "deep-forest",
@@ -213,7 +213,7 @@
       "description": "The deep, mossy greens of a forest at dusk.",
       "mode": "dark",
       "css": "themes/deep-forest/theme.css",
-      "thumbnail": "themes/deep-forest/thumbnail.png"
+      "thumbnail": "themes/deep-forest/thumbnail.webp"
     },
     {
       "id": "doh-matic",
@@ -226,7 +226,7 @@
         "series"
       ],
       "css": "themes/doh-matic/theme.css",
-      "thumbnail": "themes/doh-matic/thumbnail.png"
+      "thumbnail": "themes/doh-matic/thumbnail.webp"
     },
     {
       "id": "dos",
@@ -239,7 +239,7 @@
         "operating-systems"
       ],
       "css": "themes/dos/theme.css",
-      "thumbnail": "themes/dos/thumbnail.png"
+      "thumbnail": "themes/dos/thumbnail.webp"
     },
     {
       "id": "dracula",
@@ -253,7 +253,7 @@
         "dracula"
       ],
       "css": "themes/dracula/theme.css",
-      "thumbnail": "themes/dracula/thumbnail.png"
+      "thumbnail": "themes/dracula/thumbnail.webp"
     },
     {
       "id": "dune",
@@ -266,7 +266,7 @@
         "movies"
       ],
       "css": "themes/dune/theme.css",
-      "thumbnail": "themes/dune/thumbnail.png"
+      "thumbnail": "themes/dune/thumbnail.webp"
     },
     {
       "id": "duskfox",
@@ -280,7 +280,7 @@
         "nightfox"
       ],
       "css": "themes/duskfox/theme.css",
-      "thumbnail": "themes/duskfox/thumbnail.png"
+      "thumbnail": "themes/duskfox/thumbnail.webp"
     },
     {
       "id": "dzr0",
@@ -293,7 +293,7 @@
         "mediaplayer"
       ],
       "css": "themes/dzr0/theme.css",
-      "thumbnail": "themes/dzr0/thumbnail.png"
+      "thumbnail": "themes/dzr0/thumbnail.webp"
     },
     {
       "id": "frappe",
@@ -307,7 +307,7 @@
         "catppuccin"
       ],
       "css": "themes/frappe/theme.css",
-      "thumbnail": "themes/frappe/thumbnail.png"
+      "thumbnail": "themes/frappe/thumbnail.webp"
     },
     {
       "id": "grand-theft-audio",
@@ -320,7 +320,7 @@
         "games"
       ],
       "css": "themes/grand-theft-audio/theme.css",
-      "thumbnail": "themes/grand-theft-audio/thumbnail.png"
+      "thumbnail": "themes/grand-theft-audio/thumbnail.webp"
     },
     {
       "id": "gruvbox-dark-hard",
@@ -334,7 +334,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-dark-hard/theme.css",
-      "thumbnail": "themes/gruvbox-dark-hard/thumbnail.png"
+      "thumbnail": "themes/gruvbox-dark-hard/thumbnail.webp"
     },
     {
       "id": "gruvbox-dark-medium",
@@ -348,7 +348,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-dark-medium/theme.css",
-      "thumbnail": "themes/gruvbox-dark-medium/thumbnail.png"
+      "thumbnail": "themes/gruvbox-dark-medium/thumbnail.webp"
     },
     {
       "id": "gruvbox-dark-soft",
@@ -362,7 +362,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-dark-soft/theme.css",
-      "thumbnail": "themes/gruvbox-dark-soft/thumbnail.png"
+      "thumbnail": "themes/gruvbox-dark-soft/thumbnail.webp"
     },
     {
       "id": "gruvbox-light-hard",
@@ -376,7 +376,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-light-hard/theme.css",
-      "thumbnail": "themes/gruvbox-light-hard/thumbnail.png"
+      "thumbnail": "themes/gruvbox-light-hard/thumbnail.webp"
     },
     {
       "id": "gruvbox-light-medium",
@@ -390,7 +390,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-light-medium/theme.css",
-      "thumbnail": "themes/gruvbox-light-medium/thumbnail.png"
+      "thumbnail": "themes/gruvbox-light-medium/thumbnail.webp"
     },
     {
       "id": "gruvbox-light-soft",
@@ -404,7 +404,7 @@
         "gruvbox"
       ],
       "css": "themes/gruvbox-light-soft/theme.css",
-      "thumbnail": "themes/gruvbox-light-soft/thumbnail.png"
+      "thumbnail": "themes/gruvbox-light-soft/thumbnail.webp"
     },
     {
       "id": "gw1",
@@ -417,7 +417,7 @@
         "games"
       ],
       "css": "themes/gw1/theme.css",
-      "thumbnail": "themes/gw1/thumbnail.png"
+      "thumbnail": "themes/gw1/thumbnail.webp"
     },
     {
       "id": "heisenberg",
@@ -430,7 +430,7 @@
         "series"
       ],
       "css": "themes/heisenberg/theme.css",
-      "thumbnail": "themes/heisenberg/thumbnail.png"
+      "thumbnail": "themes/heisenberg/thumbnail.webp"
     },
     {
       "id": "hill-valley-85",
@@ -443,7 +443,7 @@
         "movies"
       ],
       "css": "themes/hill-valley-85/theme.css",
-      "thumbnail": "themes/hill-valley-85/thumbnail.png"
+      "thumbnail": "themes/hill-valley-85/thumbnail.webp"
     },
     {
       "id": "horde",
@@ -456,7 +456,7 @@
         "games"
       ],
       "css": "themes/horde/theme.css",
-      "thumbnail": "themes/horde/thumbnail.png"
+      "thumbnail": "themes/horde/thumbnail.webp"
     },
     {
       "id": "ice-and-fire",
@@ -469,7 +469,7 @@
         "series"
       ],
       "css": "themes/ice-and-fire/theme.css",
-      "thumbnail": "themes/ice-and-fire/thumbnail.png"
+      "thumbnail": "themes/ice-and-fire/thumbnail.webp"
     },
     {
       "id": "insta",
@@ -482,7 +482,7 @@
         "social-media"
       ],
       "css": "themes/insta/theme.css",
-      "thumbnail": "themes/insta/thumbnail.png"
+      "thumbnail": "themes/insta/thumbnail.webp"
     },
     {
       "id": "jayfin",
@@ -495,7 +495,7 @@
         "mediaplayer"
       ],
       "css": "themes/jayfin/theme.css",
-      "thumbnail": "themes/jayfin/thumbnail.png"
+      "thumbnail": "themes/jayfin/thumbnail.webp"
     },
     {
       "id": "kanagawa-dragon",
@@ -509,7 +509,7 @@
         "kanagawa"
       ],
       "css": "themes/kanagawa-dragon/theme.css",
-      "thumbnail": "themes/kanagawa-dragon/thumbnail.png"
+      "thumbnail": "themes/kanagawa-dragon/thumbnail.webp"
     },
     {
       "id": "kanagawa-lotus",
@@ -523,7 +523,7 @@
         "kanagawa"
       ],
       "css": "themes/kanagawa-lotus/theme.css",
-      "thumbnail": "themes/kanagawa-lotus/thumbnail.png"
+      "thumbnail": "themes/kanagawa-lotus/thumbnail.webp"
     },
     {
       "id": "lambda-17",
@@ -536,7 +536,7 @@
         "games"
       ],
       "css": "themes/lambda-17/theme.css",
-      "thumbnail": "themes/lambda-17/thumbnail.png"
+      "thumbnail": "themes/lambda-17/thumbnail.webp"
     },
     {
       "id": "luna-teal",
@@ -549,7 +549,7 @@
         "operating-systems"
       ],
       "css": "themes/luna-teal/theme.css",
-      "thumbnail": "themes/luna-teal/thumbnail.png"
+      "thumbnail": "themes/luna-teal/thumbnail.webp"
     },
     {
       "id": "macchiato",
@@ -563,7 +563,7 @@
         "catppuccin"
       ],
       "css": "themes/macchiato/theme.css",
-      "thumbnail": "themes/macchiato/thumbnail.png"
+      "thumbnail": "themes/macchiato/thumbnail.webp"
     },
     {
       "id": "midnight-blue",
@@ -573,7 +573,7 @@
       "description": "Calm, deep midnight-blue tones.",
       "mode": "dark",
       "css": "themes/midnight-blue/theme.css",
-      "thumbnail": "themes/midnight-blue/thumbnail.png"
+      "thumbnail": "themes/midnight-blue/thumbnail.webp"
     },
     {
       "id": "morpheus",
@@ -586,7 +586,7 @@
         "movies"
       ],
       "css": "themes/morpheus/theme.css",
-      "thumbnail": "themes/morpheus/thumbnail.png"
+      "thumbnail": "themes/morpheus/thumbnail.webp"
     },
     {
       "id": "muma-jukebox",
@@ -599,7 +599,7 @@
         "mediaplayer"
       ],
       "css": "themes/muma-jukebox/theme.css",
-      "thumbnail": "themes/muma-jukebox/thumbnail.png"
+      "thumbnail": "themes/muma-jukebox/thumbnail.webp"
     },
     {
       "id": "neon-drift",
@@ -609,7 +609,7 @@
       "description": "Cyan neon glow drifting over dark asphalt.",
       "mode": "dark",
       "css": "themes/neon-drift/theme.css",
-      "thumbnail": "themes/neon-drift/thumbnail.png"
+      "thumbnail": "themes/neon-drift/thumbnail.webp"
     },
     {
       "id": "nightcity-2077",
@@ -622,7 +622,7 @@
         "games"
       ],
       "css": "themes/nightcity-2077/theme.css",
-      "thumbnail": "themes/nightcity-2077/thumbnail.png"
+      "thumbnail": "themes/nightcity-2077/thumbnail.webp"
     },
     {
       "id": "nightfox",
@@ -636,7 +636,7 @@
         "nightfox"
       ],
       "css": "themes/nightfox/theme.css",
-      "thumbnail": "themes/nightfox/thumbnail.png"
+      "thumbnail": "themes/nightfox/thumbnail.webp"
     },
     {
       "id": "nord",
@@ -650,7 +650,7 @@
         "nord"
       ],
       "css": "themes/nord/theme.css",
-      "thumbnail": "themes/nord/thumbnail.png"
+      "thumbnail": "themes/nord/thumbnail.webp"
     },
     {
       "id": "nord-aurora",
@@ -664,7 +664,7 @@
         "nord"
       ],
       "css": "themes/nord-aurora/theme.css",
-      "thumbnail": "themes/nord-aurora/thumbnail.png"
+      "thumbnail": "themes/nord-aurora/thumbnail.webp"
     },
     {
       "id": "nord-frost",
@@ -678,7 +678,7 @@
         "nord"
       ],
       "css": "themes/nord-frost/theme.css",
-      "thumbnail": "themes/nord-frost/thumbnail.png"
+      "thumbnail": "themes/nord-frost/thumbnail.webp"
     },
     {
       "id": "nord-snowstorm",
@@ -692,7 +692,7 @@
         "nord"
       ],
       "css": "themes/nord-snowstorm/theme.css",
-      "thumbnail": "themes/nord-snowstorm/thumbnail.png"
+      "thumbnail": "themes/nord-snowstorm/thumbnail.webp"
     },
     {
       "id": "nordfox",
@@ -706,7 +706,7 @@
         "nightfox"
       ],
       "css": "themes/nordfox/theme.css",
-      "thumbnail": "themes/nordfox/thumbnail.png"
+      "thumbnail": "themes/nordfox/thumbnail.webp"
     },
     {
       "id": "nucleo",
@@ -716,7 +716,7 @@
       "description": "Warm amber and sand on a paper-cream base.",
       "mode": "light",
       "css": "themes/nucleo/theme.css",
-      "thumbnail": "themes/nucleo/thumbnail.png"
+      "thumbnail": "themes/nucleo/thumbnail.webp"
     },
     {
       "id": "obsidian-black",
@@ -726,7 +726,7 @@
       "description": "Glossy obsidian black with the faintest sheen.",
       "mode": "dark",
       "css": "themes/obsidian-black/theme.css",
-      "thumbnail": "themes/obsidian-black/thumbnail.png"
+      "thumbnail": "themes/obsidian-black/thumbnail.webp"
     },
     {
       "id": "obsidian-gold",
@@ -736,7 +736,7 @@
       "description": "Obsidian black accented with warm gold.",
       "mode": "dark",
       "css": "themes/obsidian-gold/theme.css",
-      "thumbnail": "themes/obsidian-gold/thumbnail.png"
+      "thumbnail": "themes/obsidian-gold/thumbnail.webp"
     },
     {
       "id": "one-dark",
@@ -750,7 +750,7 @@
         "atom-one"
       ],
       "css": "themes/one-dark/theme.css",
-      "thumbnail": "themes/one-dark/thumbnail.png"
+      "thumbnail": "themes/one-dark/thumbnail.webp"
     },
     {
       "id": "one-light",
@@ -764,7 +764,7 @@
         "atom-one"
       ],
       "css": "themes/one-light/theme.css",
-      "thumbnail": "themes/one-light/thumbnail.png"
+      "thumbnail": "themes/one-light/thumbnail.webp"
     },
     {
       "id": "p-dvd",
@@ -777,7 +777,7 @@
         "mediaplayer"
       ],
       "css": "themes/p-dvd/theme.css",
-      "thumbnail": "themes/p-dvd/thumbnail.png"
+      "thumbnail": "themes/p-dvd/thumbnail.webp"
     },
     {
       "id": "poison",
@@ -787,7 +787,7 @@
       "description": "Toxic neon green over a murky dark base.",
       "mode": "dark",
       "css": "themes/poison/theme.css",
-      "thumbnail": "themes/poison/thumbnail.png"
+      "thumbnail": "themes/poison/thumbnail.webp"
     },
     {
       "id": "psychowave",
@@ -797,7 +797,7 @@
       "description": "Psychedelic purple waves over deep dusk.",
       "mode": "dark",
       "css": "themes/psychowave/theme.css",
-      "thumbnail": "themes/psychowave/thumbnail.png"
+      "thumbnail": "themes/psychowave/thumbnail.webp"
     },
     {
       "id": "readit",
@@ -810,7 +810,7 @@
         "social-media"
       ],
       "css": "themes/readit/theme.css",
-      "thumbnail": "themes/readit/thumbnail.png"
+      "thumbnail": "themes/readit/thumbnail.webp"
     },
     {
       "id": "sakura-night",
@@ -820,7 +820,7 @@
       "description": "Soft cherry-blossom pink against a night sky.",
       "mode": "dark",
       "css": "themes/sakura-night/theme.css",
-      "thumbnail": "themes/sakura-night/thumbnail.png"
+      "thumbnail": "themes/sakura-night/thumbnail.webp"
     },
     {
       "id": "sepia-dark",
@@ -830,7 +830,7 @@
       "description": "Warm sepia tones for easy low-light reading.",
       "mode": "dark",
       "css": "themes/sepia-dark/theme.css",
-      "thumbnail": "themes/sepia-dark/thumbnail.png"
+      "thumbnail": "themes/sepia-dark/thumbnail.webp"
     },
     {
       "id": "spider-tech",
@@ -843,7 +843,7 @@
         "movies"
       ],
       "css": "themes/spider-tech/theme.css",
-      "thumbnail": "themes/spider-tech/thumbnail.png"
+      "thumbnail": "themes/spider-tech/thumbnail.webp"
     },
     {
       "id": "spotless",
@@ -856,7 +856,7 @@
         "mediaplayer"
       ],
       "css": "themes/spotless/theme.css",
-      "thumbnail": "themes/spotless/thumbnail.png"
+      "thumbnail": "themes/spotless/thumbnail.webp"
     },
     {
       "id": "t-800",
@@ -869,7 +869,7 @@
         "movies"
       ],
       "css": "themes/t-800/theme.css",
-      "thumbnail": "themes/t-800/thumbnail.png"
+      "thumbnail": "themes/t-800/thumbnail.webp"
     },
     {
       "id": "terafox",
@@ -883,7 +883,7 @@
         "nightfox"
       ],
       "css": "themes/terafox/theme.css",
-      "thumbnail": "themes/terafox/thumbnail.png"
+      "thumbnail": "themes/terafox/thumbnail.webp"
     },
     {
       "id": "tetrastack",
@@ -896,7 +896,7 @@
         "games"
       ],
       "css": "themes/tetrastack/theme.css",
-      "thumbnail": "themes/tetrastack/thumbnail.png"
+      "thumbnail": "themes/tetrastack/thumbnail.webp"
     },
     {
       "id": "toy-tale",
@@ -909,7 +909,7 @@
         "movies"
       ],
       "css": "themes/toy-tale/theme.css",
-      "thumbnail": "themes/toy-tale/thumbnail.png"
+      "thumbnail": "themes/toy-tale/thumbnail.webp"
     },
     {
       "id": "turtle-power",
@@ -922,7 +922,7 @@
         "series"
       ],
       "css": "themes/turtle-power/theme.css",
-      "thumbnail": "themes/turtle-power/thumbnail.png"
+      "thumbnail": "themes/turtle-power/thumbnail.webp"
     },
     {
       "id": "unix",
@@ -935,7 +935,7 @@
         "operating-systems"
       ],
       "css": "themes/unix/theme.css",
-      "thumbnail": "themes/unix/thumbnail.png"
+      "thumbnail": "themes/unix/thumbnail.webp"
     },
     {
       "id": "v-tactical",
@@ -948,7 +948,7 @@
         "games"
       ],
       "css": "themes/v-tactical/theme.css",
-      "thumbnail": "themes/v-tactical/thumbnail.png"
+      "thumbnail": "themes/v-tactical/thumbnail.webp"
     },
     {
       "id": "vintage-tube-radio",
@@ -958,7 +958,7 @@
       "description": "The warm amber glow of a vintage tube radio.",
       "mode": "dark",
       "css": "themes/vintage-tube-radio/theme.css",
-      "thumbnail": "themes/vintage-tube-radio/thumbnail.png"
+      "thumbnail": "themes/vintage-tube-radio/thumbnail.webp"
     },
     {
       "id": "violet-haze",
@@ -968,7 +968,7 @@
       "description": "A soft haze of violets and twilight.",
       "mode": "dark",
       "css": "themes/violet-haze/theme.css",
-      "thumbnail": "themes/violet-haze/thumbnail.png"
+      "thumbnail": "themes/violet-haze/thumbnail.webp"
     },
     {
       "id": "volcanic-dark",
@@ -978,7 +978,7 @@
       "description": "Molten copper-red glowing over volcanic black.",
       "mode": "dark",
       "css": "themes/volcanic-dark/theme.css",
-      "thumbnail": "themes/volcanic-dark/thumbnail.png"
+      "thumbnail": "themes/volcanic-dark/thumbnail.webp"
     },
     {
       "id": "vs-1984",
@@ -992,7 +992,7 @@
         "1984"
       ],
       "css": "themes/vs-1984/theme.css",
-      "thumbnail": "themes/vs-1984/thumbnail.png"
+      "thumbnail": "themes/vs-1984/thumbnail.webp"
     },
     {
       "id": "vs-1984-cyberpunk",
@@ -1006,7 +1006,7 @@
         "1984"
       ],
       "css": "themes/vs-1984-cyberpunk/theme.css",
-      "thumbnail": "themes/vs-1984-cyberpunk/thumbnail.png"
+      "thumbnail": "themes/vs-1984-cyberpunk/thumbnail.webp"
     },
     {
       "id": "vs-1984-light",
@@ -1020,7 +1020,7 @@
         "1984"
       ],
       "css": "themes/vs-1984-light/theme.css",
-      "thumbnail": "themes/vs-1984-light/thumbnail.png"
+      "thumbnail": "themes/vs-1984-light/thumbnail.webp"
     },
     {
       "id": "vs-1984-orwell",
@@ -1034,7 +1034,7 @@
         "1984"
       ],
       "css": "themes/vs-1984-orwell/theme.css",
-      "thumbnail": "themes/vs-1984-orwell/thumbnail.png"
+      "thumbnail": "themes/vs-1984-orwell/thumbnail.webp"
     },
     {
       "id": "w10",
@@ -1047,7 +1047,7 @@
         "operating-systems"
       ],
       "css": "themes/w10/theme.css",
-      "thumbnail": "themes/w10/thumbnail.png"
+      "thumbnail": "themes/w10/thumbnail.webp"
     },
     {
       "id": "w11",
@@ -1060,7 +1060,7 @@
         "operating-systems"
       ],
       "css": "themes/w11/theme.css",
-      "thumbnail": "themes/w11/thumbnail.png"
+      "thumbnail": "themes/w11/thumbnail.webp"
     },
     {
       "id": "w3-1",
@@ -1073,7 +1073,7 @@
         "operating-systems"
       ],
       "css": "themes/w3-1/theme.css",
-      "thumbnail": "themes/w3-1/thumbnail.png"
+      "thumbnail": "themes/w3-1/thumbnail.webp"
     },
     {
       "id": "w98",
@@ -1086,7 +1086,7 @@
         "operating-systems"
       ],
       "css": "themes/w98/theme.css",
-      "thumbnail": "themes/w98/thumbnail.png"
+      "thumbnail": "themes/w98/thumbnail.webp"
     },
     {
       "id": "winmedplayer",
@@ -1099,7 +1099,7 @@
         "mediaplayer"
       ],
       "css": "themes/winmedplayer/theme.css",
-      "thumbnail": "themes/winmedplayer/thumbnail.png"
+      "thumbnail": "themes/winmedplayer/thumbnail.webp"
     },
     {
       "id": "wnamp",
@@ -1112,7 +1112,7 @@
         "mediaplayer"
       ],
       "css": "themes/wnamp/theme.css",
-      "thumbnail": "themes/wnamp/thumbnail.png"
+      "thumbnail": "themes/wnamp/thumbnail.webp"
     }
   ]
 }
