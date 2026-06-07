@@ -15,7 +15,9 @@ tokens — validated automatically and served to the in-app store over a CDN.
    npm install
    node scripts/validate-theme.mjs themes/<your-id>
    ```
-5. Open a pull request against `main` — **one theme per PR**.
+5. Open a pull request against `main` — **one theme per PR** (so each theme gets
+   its own validation and visual review, and a problem with one never blocks the
+   others from merging).
 
 ## The CSS contract (enforced by CI)
 
