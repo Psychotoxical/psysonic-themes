@@ -21,13 +21,25 @@ tokens — validated automatically and served to the in-app store over a CDN.
 
 ## The CSS contract (enforced by CI)
 
-Your `theme.css` may set **only** the colour tokens listed in
-[`schema/allowed-tokens.json`](schema/allowed-tokens.json) (plus `color-scheme`),
-on exactly one `[data-theme='<id>']` selector. No other selectors, no `@import`,
-no external `url()` — the only `url()` allowed is the inline `data:` SVG on
-`--select-arrow`. All **core** tokens are required; optional and per-region
-tokens are not. The `validate` workflow checks every bit of this, so run it
-before you push.
+`theme.css` is **free-form CSS** — any selectors, structure, `@media`, and
+`@keyframes` are fair game. Recolouring the semantic tokens in
+[`schema/allowed-tokens.json`](schema/allowed-tokens.json) on the
+`[data-theme='<id>']` root is the recommended starting point — it recolours the
+whole app in one place — but you are not limited to them. Themes can also react
+to app state via same-element attributes on the root, e.g.
+`[data-theme='<id>'][data-playing='true']` (also `data-fullscreen`,
+`data-sidebar-collapsed`, `data-lyrics-open`).
+
+The `validate` workflow does **not** police your design — only a small **safety
+floor**. Quality and taste are handled by review. The floor is:
+
+- **No network** — no `@import`, and every `url()` must be an inline `url(data:...)` URI.
+- **No scripts** — no `expression()`, `javascript:`, `-moz-binding`, or `<style>` / `<script>`.
+- **No `@property`** — it would register a global custom property that could clash.
+- **Namespaced animations** — every `@keyframes` name must start with `<id>-`.
+- **Size cap** — `theme.css` ≤ 256 KB.
+
+Run the validator (see **Quick start** above) before you push.
 
 **`thumbnail.png` (or `.jpg`):** a **16:9 screenshot** of Psysonic with your
 theme applied, **at least 1280×720** (aspect 1.5–1.85, source ≤ 6 MB). You don't
