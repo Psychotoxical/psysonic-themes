@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-07T18:09:41.942Z",
+  "generatedAt": "2026-06-08T16:09:25.935Z",
   "themes": [
     {
       "id": "aero-glass",
@@ -567,7 +567,7 @@
     },
     {
       "id": "mainframe-dark",
-      "name": "Mainframe_dark",
+      "name": "Mainframe Dark",
       "author": "Asra",
       "version": "1.0.0",
       "description": "Cold steel terminal aesthetic with animated PCB circuit sidebar. Deep dark backgrounds, Breeze-style titlebar buttons.",
