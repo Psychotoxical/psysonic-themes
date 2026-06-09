@@ -32,7 +32,6 @@
     "--bg-glass": "Translucent glass background (use rgba — sits over blurred surfaces).",
     "--border": "Default border colour.",
     "--border-subtle": "Subtle / hairline border.",
-    "--border-dropdown": "Border for dropdowns / popovers.",
     "--text-primary": "Primary text.",
     "--text-secondary": "Secondary text.",
     "--text-muted": "Muted / tertiary text.",
@@ -41,8 +40,7 @@
     "--positive": "Success / positive.",
     "--warning": "Warning.",
     "--highlight": "Highlight / rating colour.",
-    "--select-arrow": "Dropdown chevron, an inline SVG data-URI. The one token whose value is url(data:...). Recolour by changing the stroke=%23RRGGBB hex inside the URI.",
-    "--shadow-dropdown": "Drop-shadow colour for dropdowns/popovers (e.g. rgba(0,0,0,0.6))."
+    "--select-arrow": "Dropdown chevron, an inline SVG data-URI. The one token whose value is url(data:...). Recolour by changing the stroke=%23RRGGBB hex inside the URI."
   },
   "optional": {
     "--volume-accent": "Volume slider fill (falls back to --accent).",
@@ -83,6 +81,8 @@
     "--menu-item-hover": "Menu item hover background.",
     "--menu-item-active-text": "Menu item active/selected text.",
     "--menu-divider": "Menu divider line.",
+    "--border-dropdown": "Dropdown / popover border (falls back to --border).",
+    "--shadow-dropdown": "Dropdown / popover drop-shadow colour (falls back to a default shadow).",
     "--modal-bg": "Modal panel background.",
     "--modal-scrim": "Modal backdrop scrim.",
     "--input-bg": "Input / select background.",
